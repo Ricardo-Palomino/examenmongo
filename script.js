@@ -20,7 +20,7 @@ db.albums.updateOne({name: "Thriller"},{$set:{price:80000}})
 db.albums.updateMany({},{$rename:{origin: "import_type"}})
 
 //6. Cambiar import_type//
-db.albums.updateMany({"provider.country":"Colombia"}, {$rename:{import_type: "Nacional"}})
+db.albums.updateMany({country:"Colombia"}, {$rename:{import_type: "Nacional"}})
 
 //7. Consultas//
 db.albums.find({genre:"Jazz"})
